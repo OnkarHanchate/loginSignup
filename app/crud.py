@@ -2,7 +2,7 @@ import email
 from sqlalchemy.orm import Session
 from app.models import User
 from app.schemas import UserSchema
-
+ 
 
 def get_user(db: Session, skip: int = 0, limit: int = 100):
     return db.query(User).offset(skip).limit(limit).all()

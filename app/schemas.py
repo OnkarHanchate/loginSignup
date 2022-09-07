@@ -3,7 +3,7 @@ from pydantic import BaseModel , Field
 from pydantic.generics import GenericModel
 
 T = TypeVar('T')
-
+ 
 
 class UserSchema(BaseModel):
     id: Optional[int] = None

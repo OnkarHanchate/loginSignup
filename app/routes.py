@@ -37,7 +37,7 @@ async def get_users(skip: int = 0, limit: int = 100, db: Session = Depends(get_d
     _users = crud.get_user(db, skip, limit)
     return Response(status="Ok", code="200", message="Success fetch all data", result=_users)
 
-
+ 
 @router.delete("/delete")
 async def delete_user(request: RequestUser,  db: Session = Depends(get_db)):
     crud.remove_user(db, user_id=request.parameter.id)
